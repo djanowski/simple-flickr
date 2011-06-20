@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/../lib/simple-flickr'
-require 'ruby-debug'
+#require 'ruby-debug'
 
 # Let's make sure we don't contact flickr during specs.
 # Overide open (open-uri) to just return flickr-xmli
