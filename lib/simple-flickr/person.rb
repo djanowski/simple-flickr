@@ -29,7 +29,7 @@ module Flickr
     # === Returns
     # [Flickr::Photo]:: An array of Flickr::Photo objects.
     def photos( options = {} )
-      Photo.api_query( 'people.getPublicPhotos', @client, options.merge(:user_id => id)  )
+      Photo.api_query( 'photos.search', @client, options.merge(:user_id => id)  )
     end
     
     # Return the persons photosets.

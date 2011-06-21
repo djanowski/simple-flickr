@@ -79,7 +79,7 @@ describe Flickr::Person do
   
   it 'should return the users photos' do 
     photos = mock( 'photos' )
-    Flickr::Photo.should_receive( :api_query ).with( 'people.getPublicPhotos', @client, :user_id => '12037949754@N01', :per_page => 2 ).and_return( photos )
+    Flickr::Photo.should_receive( :api_query ).with( 'photos.search', @client, :user_id => '12037949754@N01', :per_page => 2 ).and_return( photos )
     @person.photos( :per_page => 2).should == photos    
   end
   
